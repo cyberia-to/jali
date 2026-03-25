@@ -543,6 +543,7 @@ name = "jali-cli"
 version = "0.1.0"
 dependencies = [
  "jali",
+ "jali-wgsl",
  "nebu",
 ]
 
