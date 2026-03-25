@@ -1,5 +1,4 @@
 /target/
-/root/
 **/*.rs.bk
 *.swp
 *.swo
