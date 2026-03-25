@@ -1,0 +1,14 @@
+# ---
+# tags: jali, config
+# crystal-type: source
+# crystal-domain: comp
+# ---
+[package]
+name = "jali"
+version = "0.1.0"
+edition = "2024"
+description = "polynomial ring arithmetic R_q = F_p[x]/(x^n+1) over Goldilocks"
+license = "Cyber"
+
+[dependencies]
+nebu = { path = "../nebu" }
