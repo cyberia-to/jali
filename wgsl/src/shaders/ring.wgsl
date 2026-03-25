@@ -2,6 +2,10 @@
 // ring.wgsl — Ring-level operations for R_q = F_p[x]/(x^n+1) on GPU
 // ---------------------------------------------------------------------------
 //
+// DEPENDS ON: nebu field.wgsl (Fp struct, fp_add, fp_sub, fp_mul, fp_neg)
+//             nebu ntt.wgsl (butterfly operations)
+// Prepend both nebu shaders before this file at load time.
+//
 // This shader provides the coefficient-wise and ring-level operations needed
 // for polynomial arithmetic in the ring R_q over the Goldilocks field.
 //
