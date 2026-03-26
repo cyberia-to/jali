@@ -10,7 +10,7 @@ jali/
 │   └── src/lib.rs   RingElement, NTT, noise tracking, sampling, automorphisms
 ├── cli/             command-line tool (jali-cli crate)
 │   └── src/main.rs  ring ops, NTT, sample, bench commands
-├── reference/       canonical specifications (7 docs)
+├── specs/       canonical specifications (7 docs)
 └── docs/explanation/ educational articles (5 files)
 ```
 
@@ -47,7 +47,7 @@ jali is the ring layer. nebu provides scalars. mudra and zheng consume ring elem
 
 ## writing code
 
-- reference specs in reference/ are the source of truth. code follows spec.
+- reference specs in specs/ are the source of truth. code follows spec.
 - `#[inline]` on ntt_butterfly, pointwise_mul, ring_add. `#[inline(always)]` only on coefficient-wise add/sub (trivially parallel, no branching).
 - avoid `#[inline(always)]` on NTT routines — they have loops and the compiler should decide unrolling.
 - all new operations need test vectors. cross-verify NTT against naive polynomial multiplication.
